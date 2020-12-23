@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\APIController;
-use App\Http\Livewire\ktp;
+use App\Http\Livewire\Permohonans;
+// use App\Models\Permohonan as Permohonan;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 // Route::get('/register', [APIController::class, 'getApi']);
 Route::get('/get/{nik}', [APIController::class, 'getApi']);
-Route::get('/ktp', ktp::class);
+Route::get('/history', Permohonans::class)->name('history');
 // Route::get('/ktp', [ktp::class, 'getApi']);
