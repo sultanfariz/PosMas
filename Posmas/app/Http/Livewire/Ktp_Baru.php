@@ -9,11 +9,11 @@ class Ktp_Baru extends Component
 {
     public $permohonan;
 
-    // public function render()
-    // {
-    //     $this->permohonan = Permohonan::all();
-    //     return view('livewire.history_permohonan');
-    // }
+    public function render()
+    {
+        // $this->permohonan = Permohonan::all();
+        return view('livewire.layanan_ktp_baru');
+    }
 
     public function store()
     {
