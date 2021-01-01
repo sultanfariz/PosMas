@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Permohonan extends Migration
+class KtpBaru extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class Permohonan extends Migration
      */
     public function up()
     {
-        Schema::create('permohonan', function (Blueprint $table) {
+        //
+        Schema::create('ktp_baru', function (Blueprint $table) {
             $table->id();
-            $table->string('nik')->unique();
+            $table->string('nik');
             $table->date('jadwal');
             $table->string('service_point');
-            $table->string('pelayanan');
+            $table->string('fotokopi_kk_path')->nullable();
+            $table->string('fotokopi_akta_path')->nullable();
             $table->string('status');
             // $table->string('no_kk')->unique();
             // $table->string('nama');

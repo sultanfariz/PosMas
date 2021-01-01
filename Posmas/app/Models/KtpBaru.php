@@ -9,12 +9,13 @@ class KtpBaru extends Model
 {
     use HasFactory;
 
-    protected $table = "permohonan";
+    protected $table = "ktp_baru";
     protected $fillable = [
         'nik',
         'jadwal',
         'service_point',
-        'pelayanan',
-        'status'
+        'fotokopi_kk_path',
+        'fotokopi_akta_path',
+        'status',
     ];
 }
