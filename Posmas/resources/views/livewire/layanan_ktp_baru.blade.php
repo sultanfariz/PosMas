@@ -12,8 +12,10 @@
                             <div class="col-span-2 my-5">
                                 <form enctype="multipart/form-data" method="POST" action="{{ route('create-ktp-baru') }}">
                                     @csrf
-                                    <h2 class="text-xl">Unggah Berkas Persyaratan</h2>
-                                    <p class="text-xs mb-3">Masukkan file dalam ekstensi jpg,png,jpeg,pdf</p>
+                                    <h2 class="text-xl mb-4">Unggah Berkas Persyaratan</h2>
+                                    <p class="text-xs">* Surat Pengantar RT/RW yang asli wajib dibawa ke kantor pelayanan.</p>
+                                    <p class="text-xs">* Fotokopi KK dan Akta Kelahiran dapat dibawa ke kantor pelayanan atau dikirim melalui inputan di bawah ini. </p>
+                                    <p class="text-xs mb-3">* Harap masukkan file dalam ekstensi jpg, png, jpeg, atau pdf.</p>
 
                                     <div>
                                         <x-jet-label for="fotokopi_kk" value="{{ __('Fotokopi Kartu Keluarga') }}" />
@@ -28,7 +30,7 @@
                                     <h2 class="text-xl mt-10 mb-3">Atur Penjadwalan</h2>
                                     <div class="mt-4">
                                         <label class="block mt-4">
-                                            <x-jet-label for="service_point" value="{{ __('Service Point') }}" />
+                                            <x-jet-label for="service_point" value="{{ __('Service Point  *') }}" />
                                             <select id="service_point" name="service_point" :value="old('service_point')" required autofocus autocomplete="service_point" class="form-select mt-1 block w-full">
                                                 <option>Kantor Disdukcapil Bogor</option>
                                             </select>
@@ -36,7 +38,7 @@
                                     </div>
 
                                     <div class="mt-4">
-                                        <x-jet-label for="tanggal" value="{{ __('Tanggal') }}" />
+                                        <x-jet-label for="tanggal" value="{{ __('Tanggal *') }}" />
                                         <x-jet-input id="tanggal" class="block mt-1 w-full" type="date" name="tanggal" :value="old('tanggal')" required />
                                     </div>
 

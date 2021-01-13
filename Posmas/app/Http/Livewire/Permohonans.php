@@ -19,7 +19,8 @@ class Permohonans extends Component
 
     public function render()
     {
-        $this->permohonan = Permohonan::all();
+        $this->user = auth()->user();
+        $this->permohonan = Permohonan::where('nik', $this->user->nik)->get();
         // $this->user = auth()->user();
         // $this->client = new client();
         // $this->res = $this->client->get('http://localhost:4500/get', [
